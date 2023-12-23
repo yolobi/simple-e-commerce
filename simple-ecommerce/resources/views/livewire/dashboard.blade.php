@@ -21,4 +21,6 @@
                 Experience.</p>
         </div>
     </div>
+
+    @livewire('product.index')
 </div>
