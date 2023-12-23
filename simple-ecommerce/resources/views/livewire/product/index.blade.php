@@ -16,7 +16,7 @@
                     <label for="search" class="sr-only">
                         Search</label>
                     <input type="search" name="search" id="search" wire:model.live="search"
-                        class="block w-full rounded-md border-0 py-1.5 px-1.5 text-center text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        class="block w-full rounded-md border-0 py-1.5 px-1.5 text-center text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-cyan-600 sm:text-sm sm:leading-6"
                         placeholder="Search Product">
                 </div>
             </div>
@@ -38,7 +38,7 @@
                         <div class="mt-4 flex justify-between">
                             <div>
                                 <h3 class="text-sm text-gray-700">
-                                    <a href="#">
+                                    <a href="{{ route('product-detail', ['product_id' => $prod]) }}">
                                         <span aria-hidden="true" class="absolute inset-0"></span>
                                         {{ ucfirst($prod->name) }}
                                     </a>

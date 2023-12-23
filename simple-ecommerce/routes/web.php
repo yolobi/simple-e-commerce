@@ -1,6 +1,7 @@
 <?php
 
 use App\Livewire\Dashboard;
+use App\Livewire\Product\Detail;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,4 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', Dashboard::class);
+Route::get('/', Dashboard::class)->name('dashboard');
+
+Route::get('/product/{product_id}', Detail::class)->name('product-detail');
