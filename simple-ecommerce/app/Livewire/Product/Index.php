@@ -20,6 +20,7 @@ class Index extends Component
     public function render()
     {
         $products = Product::query()
+            ->where('name', 'ilike', '%' . $this->search . '%')
             ->when($this->selectedCategory != 0, function ($query) {
                 $query->where('category_id', $this->selectedCategory);
             })

@@ -1,20 +1,28 @@
 <div>
-    {{-- <div class="relative isolate overflow-hidden bg-gray-900 my-2 px-2 py-2 sm:py-4 rounded-lg">
-        <div class="flex">
-            <div class="py-2 mx-2">
-                <input type="text" name="search" id="search" wire:model="search"
-                    class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                    placeholder="Search">
-            </div>
-            <select wire:model="selectedCategory" wire:loading.attr="disabled"
-                class="mx-2 lock rounded-md border-gray-300 py-2 pl-3 pr-10 text-base focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
-                <option value="semua">Category</option>
+
+    <div
+        class="relative isolate overflow-hidden bg-white my-6 px-2 py-2 sm:py-4 rounded-lg border border-gray-300 shadow">
+        <div class="flex justify-center">
+            <select wire:model.live="selectedCategory" wire:loading.attr="disabled"
+                class="mx-2 lock rounded-md border-gray-300 pl-3 pr-10 text-base focus:border-cyan-500 focus:outline-none focus:ring-cyan-500 sm:text-sm">
+                <option value=0>Category</option>
                 @foreach ($categories as $category)
                     <option value="{{ $category->id }}"> {{ ucfirst($category->name) }} </option>
                 @endforeach
             </select>
+
+            <div class="w-full">
+                <div>
+                    <label for="search" class="sr-only">
+                        Search</label>
+                    <input type="search" name="search" id="search" wire:model.live="search"
+                        class="block w-full rounded-md border-0 py-1.5 px-1.5 text-center text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        placeholder="Search Product">
+                </div>
+            </div>
+
         </div>
-    </div> --}}
+    </div>
 
     <div class="relative isolate overflow-hidden">
         <div class="">
